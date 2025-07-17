@@ -1,82 +1,49 @@
-# Lightweight React Template for KAVIA
+# Educational OTT-Style Video App Frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+## Overview
+
+This is a React + Tailwind CSS frontend for an educational OTT video platform.  
+- **Students** browse a grid of embedded YouTube courses, Coursera-inspired
+- **Admins** login and use a dashboard to manage (upload) courses/videos
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Student home with curated course video grid
+- Reusable CourseCard component (YouTube embed)
+- Admin login and dashboard (dummy auth for now)
+- Admin dashboard UI for uploading new videos
+- Responsive, modern, Coursera-inspired UI with Tailwind CSS
+- Routing with React Router
 
-## Getting Started
+## Quick Start
 
-In the project directory, you can run:
+In the project directory:
 
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+```bash
+npm install
+npm start
 ```
 
-### Components
+Open [http://localhost:3000](http://localhost:3000)
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+## Development
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+You'll need Tailwind CSS set up.  
+All styles are in `src/tailwind.css`, components use Tailwind utility classes.
 
-## Learn More
+### Adding Pages/Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src/pages/HomePage.js`: Student view
+- `src/pages/AdminLogin.js`: Admin login (dummy)
+- `src/pages/AdminDashboard.js`: Admin video management/upload
+- `src/components/CourseCard.js`: Reusable course/video card
 
-### Code Splitting
+### Theming
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Light/dark toggle is built-in (top-right). Extend as needed.
 
-### Analyzing the Bundle Size
+#### Brand colors:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- primary: #0056d2
+- secondary: #17294d
+- accent: #29bbb9
